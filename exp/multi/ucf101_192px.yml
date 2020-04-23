@@ -1,0 +1,22 @@
+dataset:
+  name: MultiLevelDataset
+  args:
+    dataset:
+      name: UCF101Dataset
+      args:
+        n_frames: 16
+        h5path: datasets/ucf101_192px/train.h5
+        config_path: datasets/ucf101_192px/train.json
+        img_size: 192
+        stride: 1
+
+inception_score:
+  classifier:
+    name: C3DVersion1UCF101
+    args:
+      pretrained_model: datasets/models/conv3d_deepnetA_ucf.npz
+  batchsize: 1
+  n_samples: 2048
+  splits: 1
+  interval: 2000
+  n_frames: 16

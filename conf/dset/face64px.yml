@@ -1,0 +1,10 @@
+dataset:
+  name: HDF5VideoDataset
+  args:
+    n_frames: 16
+    h5path: datasets/face64px/train.h5
+    config_path: datasets/face64px/train.json
+    img_size: 64
+    stride: 1
+    xmargin: 0
+    xflip: False

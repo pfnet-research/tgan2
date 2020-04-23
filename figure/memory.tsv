@@ -1,0 +1,9 @@
+Memory (Gb)	L1	L2	L3	L4	Total	Reduction
+Generator (naive)	0.722	0.745	1.503	4.746	7.716	
+Generator (frame only)	0.722	0.390	0.393	0.611	2.116	3.65
+Generator (batch only)	0.722	0.390	0.393	0.611	2.116	3.65
+Generator (proposed)	0.722	0.195	0.098	0.076	1.091	7.07
+Discriminator (naive)	0.185	0.736	2.952	11.816	15.689	
+Discriminator (frame only)	0.184	0.368	0.760	1.688	3.000	5.23
+Discriminator (batch only)	0.185	0.369	0.739	1.477	2.770	5.66
+Discriminator (proposed)	0.185	0.185	0.190	0.211	0.771	20.35

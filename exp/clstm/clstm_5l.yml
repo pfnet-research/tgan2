@@ -1,0 +1,8 @@
+gen:
+  name: TGANCLSTMGenerator
+  args:
+    n_frames: 16
+    z_slow_dim: 256
+    n_layers: 5
+    dropout: 0.1
+    stride: 1

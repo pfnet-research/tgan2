@@ -1,0 +1,99 @@
+# Training settings
+gpu: True
+communicator: pure_nccl
+seed: 1701
+batchsize: 16
+iteration: 100000
+snapshot_interval: 2000
+display_interval: 100
+out: results
+
+# Global flags
+## Activate this if you want to use CTGAN
+label: False
+
+# Optimizers
+gen_opt:
+  name: Adam
+  args:
+    alpha: 0.0001
+    beta1: 0.0
+    beta2: 0.9
+    eps: 0.00000008
+dis_opt:
+  name: Adam
+  args:
+    alpha: 0.0001
+    beta1: 0.0
+    beta2: 0.9
+    eps: 0.00000008
+
+# Updater and its extensions
+updater:
+  name: DiracUpdater
+  args:
+    lam: 0.5
+    n_dis: 1
+    reg_type: real
+    subsample_batch: True
+
+linear_decay:
+  start: 0
+
+report_keys:
+  - epoch
+  - iteration
+  - loss_gen
+  - loss_dis
+  - loss_gp
+  - g
+  - elapsed_time
+
+preview:
+  rows: 6
+  cols: 6
+  batchsize: 1
+
+# Dataset and Inception score
+dataset:
+  name: MultiLevelDataset
+  args:
+    dataset:
+      name: UCF101Dataset
+      args:
+        n_frames: 16
+        h5path: datasets/ucf101_192x256/train.h5
+        config_path: datasets/ucf101_192x256/train.json
+        img_size: 192
+        stride: 1
+    subsample_frame: True
+
+inception_score:
+  classifier:
+    name: C3DVersion1UCF101
+    args:
+      pretrained_model: datasets/models/conv3d_deepnetA_ucf.npz
+  batchsize: 1
+  n_samples: 2048
+  splits: 1
+  interval: 2000
+  n_frames: 16
+
+# Generator (w/ Frame subsampling, adaptive batch reduction)
+gen:
+  name: MultiTGANCLSTMGenerator
+  args:
+    n_frames: 16
+    z_slow_dim: 256
+    n_layers: 1
+    stride: 1
+    t_size: 3
+    clstm_ch: 1024
+    subsample_frame: True
+    subsample_batch: True
+
+# Discriminator
+dis:
+  name: MultiResNetVideoDiscriminator
+  args:
+    mid_ch: 64

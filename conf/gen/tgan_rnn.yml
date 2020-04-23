@@ -1,0 +1,17 @@
+gen:
+  name: TGANGenerator
+  args:
+    tgen:
+      name: LSTMTemporalGenerator
+      args:
+        n_frames: 16
+        z_slow_dim: 1024
+        z_fast_dim: 1024
+        stride: 1
+    igen:
+      name: ResNetImageGenerator
+      args:
+        z_slow_dim: 1024
+        z_fast_dim: 1024
+        bottom_width: 4
+        ch: 64

@@ -1,0 +1,58 @@
+# Training settings
+gpu: True
+communicator: pure_nccl
+seed: 1701
+batchsize: 8
+iteration: 100000
+snapshot_interval: 2000
+display_interval: 100
+out: results
+
+# Global flags
+## Activate this if you want to use CTGAN
+label: False
+
+# Optimizers
+gen_opt:
+  name: Adam
+  args:
+    alpha: 0.0001
+    beta1: 0.0
+    beta2: 0.9
+    eps: 0.00000008
+dis_opt:
+  name: Adam
+  args:
+    alpha: 0.0001
+    beta1: 0.0
+    beta2: 0.9
+    eps: 0.00000008
+
+# Updater and its extensions
+updater:
+  name: WGANGPUpdater
+  args:
+    lam: 10.0
+    n_dis: 5
+
+linear_decay:
+  start: null
+
+report_keys:
+  - epoch
+  - iteration
+  - loss_gen
+  - loss_dis
+  - loss_gp
+  - g
+  - elapsed_time
+
+preview:
+  rows: 6
+  cols: 6
+  batchsize: 1
+
+# These settings should be overwritten
+dataset: null
+gen: null
+dis: null

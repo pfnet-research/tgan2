@@ -1,0 +1,4 @@
+dis:
+  name: ResNetVideoDiscriminator
+  args:
+    mid_ch: 64

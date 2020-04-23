@@ -1,0 +1,15 @@
+gen:
+  name: TGANGenerator
+  args:
+    tgen:
+      name: TemporalGenerator
+      args:
+        n_frames: 16
+        z_slow_dim: 1024
+        z_fast_dim: 1024
+    igen:
+      name: ImageGenerator
+      args:
+        z_slow_dim: 1024
+        z_fast_dim: 1024
+        bottom_width: 4

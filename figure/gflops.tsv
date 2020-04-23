@@ -1,0 +1,9 @@
+GFlops	L1	L2	L3	L4	Total
+Generator (naive)	192.41	35.61	36.18	96.37	360.57
+Generator (frame only)	192.41	17.80	9.05	12.05	231.30
+Generator (batch only)	192.41	17.80	9.05	12.05	231.30
+Generator (proposed)	192.41	8.90	2.26	1.51	205.08
+Discriminator (naive)	36.09	144.34	577.37	2309.48	3067.28
+Discriminator (frame only)	36.09	72.17	172.19	478.09	758.54
+Discriminator (batch only)	36.09	72.17	144.34	288.69	541.29
+Discriminator (proposed)	36.09	36.09	43.05	59.76	174.98

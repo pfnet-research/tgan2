@@ -1,0 +1,5 @@
+gen:
+  name: GeneratorResNet3D
+  args:
+    n_frames: 16
+    z_slow_dim: 256

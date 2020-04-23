@@ -1,0 +1,9 @@
+communicator: flat
+batchsize: 2
+iteration: 1000
+snapshot_interval: 10
+display_interval: 2
+out: results_local
+
+preview:
+  batchsize: 1

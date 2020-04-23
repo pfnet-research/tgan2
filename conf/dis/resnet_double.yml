@@ -1,0 +1,4 @@
+dis:
+  name: DoubleResNetVideoDiscriminator
+  args:
+    mid_ch: 64

@@ -1,0 +1,5 @@
+dis:
+  name: VideoDiscriminator
+  args:
+    top_width: 4
+    mid_ch: 64

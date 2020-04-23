@@ -1,0 +1,9 @@
+gen:
+  args:
+    stride: 2
+    n_frames: 8
+
+dataset:
+  args:
+    stride: 2
+    n_frames: 8

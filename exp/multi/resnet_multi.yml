@@ -1,0 +1,4 @@
+dis:
+  name: MultiResNetVideoDiscriminator
+  args:
+    mid_ch: 64
