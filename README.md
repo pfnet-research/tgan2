@@ -278,5 +278,8 @@ Please cite this paper when you use the code in this repository:
     title = {Train Sparsely, Generate Densely: Memory-efficient Unsupervised Training of High-resolution Temporal GAN},
     booktitle = {International Journal of Computer Vision},
     year = {2020},
+    month = may,
+    doi = {10.1007/s11263-020-01333-y},
+    url = {https://doi.org/10.1007/s11263-020-01333-y},
 }
 ```
