@@ -3,7 +3,7 @@
 ![Generated samples by TGANv2](./images/tgan2_generated_faceforensics.gif)
 * Unconditional video generation results by TGANv2 (trained on the FaceForensics dataset)
 
-This repository contains the implementation of TGANv2 and scripts to reproduce experiments in the paper.
+This repository contains the implementation of TGANv2 (see the details in ["Train Sparsely, Generate Densely: Memory-efficient Unsupervised Training of High-resolution Temporal GAN"](https://arxiv.org/abs/1811.09245)) and scripts to reproduce experiments in the paper.
 
 ![TGANv2](./images/architecture.jpg)
 
@@ -286,3 +286,5 @@ Please cite this paper when you use the code in this repository:
     url = {https://doi.org/10.1007/s11263-020-01333-y},
 }
 ```
+
+You can find our paper also on [arxiv](https://arxiv.org/abs/1811.09245).
