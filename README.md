@@ -1,6 +1,7 @@
 # Temporal Generative Adversarial Nets v2
 
 ![Generated samples by TGANv2](./images/tgan2_generated_faceforensics.gif)
+* Unconditional video generation results by TGANv2 (trained on the FaceForensics dataset)
 
 This repository contains the implementation of TGANv2 and scripts to reproduce experiments in the paper.
 
