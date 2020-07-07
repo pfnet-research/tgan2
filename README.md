@@ -182,8 +182,8 @@ conf/dis/resnet_multi.yml \
 'linear_decay.start=0' \
 'gen.args.subsample_frame=[2,2,2]' \
 'dataset.args.subsample_frame=[2,2,2]' \
-'gen.args.subsample_batch=[2,2,2]' \
-'updater.args.subsample_batch=[2,2,2]'"
+'gen.args.subsample_batch=false' \
+'updater.args.subsample_batch=false'"
 ```
 
 ### Train TGANv2 on the FaceForensics dataset
