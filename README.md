@@ -155,8 +155,8 @@ Please download a pre-trained weights for C3D model that is used for calculating
 ```bash
 cd datasets
 if [ ! -d models ]; then mkdir -p models; fi
-wget https://github.com/mitmul/tgan2/releases/download/untagged-d2d4900c6c1bb09d9f5a/conv3d_deepnetA_ucf.npz
-wget https://github.com/mitmul/tgan2/releases/download/untagged-d2d4900c6c1bb09d9f5a/mean2.npz
+wget https://github.com/rezoo/tgan2/releases/download/v1.0/mean2.npz
+wget https://github.com/rezoo/tgan2/releases/download/v1.0/conv3d_deepnetA_ucf.npz
 ```
 
 ## Experiments
