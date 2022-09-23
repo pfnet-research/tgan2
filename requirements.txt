@@ -12,7 +12,7 @@ mpi4py
 numpy
 opencv-python
 pandas==0.25.3
-protobuf==3.7.1
+protobuf==3.18.3
 pytest
 pyyaml
 scipy
